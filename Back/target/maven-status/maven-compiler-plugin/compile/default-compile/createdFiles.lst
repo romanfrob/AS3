@@ -1,0 +1,15 @@
+com\clinic\SimpleCORSFilter.class
+com\clinic\websocket\WebSocketBroker.class
+com\clinic\controller\DoctorController.class
+com\clinic\model\PatientEntity.class
+com\clinic\websocket\NotificationController.class
+com\clinic\controller\PatientController.class
+com\clinic\SessionDB.class
+com\clinic\model\Credential.class
+com\clinic\model\Consult.class
+com\clinic\controller\ConsultController.class
+com\clinic\model\ConsultationEntity.class
+com\clinic\controller\AuthenticationController.class
+com\clinic\controller\UserController.class
+com\clinic\model\DoctorEntity.class
+com\clinic\model\UserEntity.class

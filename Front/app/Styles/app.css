@@ -1,0 +1,178 @@
+html, body, #container { height: 100%; }
+body > #container { height: auto; min-height: 100%; }
+body {  background-color: #666666;  }
+table, th , td  {
+    border: 2px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+    width: 100%;
+    font-size: large;
+    text-align: center;
+}
+th, td {
+    padding: 15px;
+    width: 25%;
+}
+/*th {*/
+    /*color: white;*/
+    /*background-color: black;*/
+/*}*/
+
+table td:first-child{
+    width: 5%;
+}
+table tr:hover {
+    cursor: pointer;
+}
+table tr:nth-child(odd)	{
+    background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+h2 {
+    color: white;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.hpButton {
+    width: 300px;
+    height: 100px;
+    background-color: #2cae25;
+    color: white;
+    font-size: large;
+    position: relative;
+    top: 20%;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.table {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 500px;
+}
+
+.formArea {
+    top: 10px;
+    position: absolute;
+    height: 320px;
+    left: 540px;
+    width: 490px;
+    text-align: center;
+    background-color: #d7bf87;
+}
+
+.formAreaAccount {
+    top: 350px;
+    position: absolute;
+    height: 430px;
+    left: 540px;
+    width: 490px;
+    text-align: center;
+    background-color: #d7bf87;
+}
+
+.formBody {
+    position: relative;
+    top: 20px;
+}
+
+input[type=text] {
+    width: 70%;
+}
+
+input[type=date] {
+    width: 70%;
+}
+
+input[type=password] {
+    width: 70%;
+}
+
+select {
+    width: 70%;
+}
+
+input[type=submit]{
+    background-color: #666699;
+    color: white;
+    width: 40%;
+    padding: 20px;
+    margin: 10px;
+}
+
+input[type=submit]:hover{
+    background-color: #b89ff0;
+    color: white;
+}
+
+.inputFields {
+    width: 70%;
+    left: 10%;
+    position: relative;
+    text-align: right;
+}
+
+table#accountsTable {
+    position: absolute;
+    left: 1050px;
+}
+
+table#accountsTable td:nth-child(2) {
+    width: 10%;
+}
+
+.passCheckbox {
+    position: absolute;
+    top: 54px;
+    right: -60px;
+    width: 100px
+}
+
+.formAreaEmployee {
+    top: 10px;
+    position: absolute;
+    height: 440px;
+    left: 540px;
+    width: 490px;
+    text-align: center;
+    background-color: #73d791;
+}
+
+.logoutButton {
+    position: absolute;
+    left: -20px;
+    top: -10px;
+}

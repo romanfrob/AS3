@@ -1,0 +1,17 @@
+<div class="table">
+    <div class="formAreaEmployee">
+        <form name="form" class="formBody">
+            <div class="inputFields">
+                <label for="patientName">Name:</label>
+                <input id="patientName" type="text" ng-model="patient.patientName" readonly/><br/>
+                <label for="description">Description:</label>
+                <textarea id="description" rows="4" cols="35">
+                {{ patient.description }}
+                </textarea>
+            </div>
+            <input type="submit" ng-click="updateDescription()" value="Update"/>
+        </form>
+    </div>
+
+    <button type="button" class="logoutButton" ng-click="logout()">&larr;</button>
+</div>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.clinic.model.DoctorEntity" table="doctor" schema="clinic">
+        <id name="doctorId">
+            <column name="doctorID" sql-type="int(11)"/>
+            <generator class="identity"/>
+        </id>
+        <property name="doctorName">
+            <column name="doctorName" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="availability">
+            <column name="availability" sql-type="varchar(10)" length="10"/>
+        </property>
+        <one-to-one name="doctorUser" class="com.clinic.model.UserEntity" cascade="all"/>
+        <property name="userId">
+            <column name="userID" sql-type="int(11)"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

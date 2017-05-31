@@ -1,0 +1,5 @@
+AuthenticationControllerTest.class
+PatientControllerTest.class
+ConsultControllerTest.class
+DoctorControllerTest.class
+UserControllerTest.class

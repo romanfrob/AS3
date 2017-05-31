@@ -1,0 +1,47 @@
+<div class="table">
+    <table id="usersTable" class="table table-condensed table-bordered table-striped">
+        <tr>
+            <th style="width: 10%;">ID</th>
+            <th>Username</th>
+            <th>Type</th>
+        </tr>
+        <tr ng-repeat="u in users" ng-click="showUser(u)">
+            <td>{{ u.userId }}</td>
+            <td>{{ u.username }}</td>
+            <td>{{ u.type }}</td>
+        </tr>
+    </table>
+
+    <div class="formAreaEmployee">
+        <form name="form" class="formBody">
+            <div class="inputFields">
+                <label for="idUser">ID:</label>
+                <input id="idUser" type="text" ng-model="selectedUser.userId" readonly/><br/>
+                <label for="username">Username:</label>
+                <input id="username" type="text" required ng-model="selectedUser.username"/><br/>
+                <label for="password">Password:</label>
+                <input id="password" type="{{inputType}}" required ng-model="selectedUser.password"/>
+                <div class="passCheckbox">
+                    <input type="checkbox" id="checkbox" ng-model="passwordCheckbox" ng-click="hideShowPassword()" />
+                    <label for="checkbox" ng-if="passwordCheckbox">Hide</label>
+                    <label for="checkbox" ng-if="!passwordCheckbox">Show</label><br/>
+                </div>
+                <label for="userType">Type:</label>
+                <select id="userType" ng-model="selectedUser.type">
+                    <option value="admin">Admin</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="secretary">Secretary</option>
+                </select>
+                <label for="doctorName" ng-hide="selectedUser.type !== 'doctor'">Dr. Name:</label>
+                <input id="doctorName" ng-hide="selectedUser.type !== 'doctor'" ng-model="selectedUser.doctorName"/><br/>
+                <span ng-show="form.cnpClient.$dirty && form.cnpClient.$error.pattern" class="help-block">CNP must contain 13 numeric characters</span>
+            </div>
+            <input type="submit" ng-click="clearForm()" value="Clear"/>
+            <input ng-disabled="form.$invalid" type="submit" ng-click="insertUser()" value="Create"/>
+            <input type="submit" ng-click="updateUser()" value="Update"/>
+            <input type="submit" ng-click="deleteUser()" value="Delete"/>
+        </form>
+    </div>
+
+    <button type="button" class="logoutButton" ng-click="logout()">&larr;</button>
+</div>
